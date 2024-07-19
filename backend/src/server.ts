@@ -3,7 +3,6 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import pino from 'pino';
-import pinoHttp from 'pino-http';
 import authRoutes from './routes/auth.routes';
 import postRoutes from './routes/post.routes';
 
@@ -22,7 +21,6 @@ const logger = pino({
   },
 });
 
-app.use(pinoHttp({ logger }));
 
 app.use(bodyParser.json());
 
