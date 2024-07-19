@@ -13,7 +13,7 @@ export default function Register() {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl">Register</CardTitle>
-          <CardDescription>Post and respond to sightings. Already a member? <a href="#" className="text-blue-500">Log-in Here</a></CardDescription>
+          <CardDescription>Post and respond to sightings. Already a member? <a href="/login" className="text-blue-500">Log-in Here</a></CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
           <div className="grid grid-cols-2 gap-6">
