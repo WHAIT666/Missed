@@ -1,15 +1,15 @@
-import { Button } from "@/components/ui/button"
-import { MapIcon, FileIcon, PlusIcon, MessageCircleIcon, UserIcon } from "lucide-react"
-import { useTheme } from "@/components/theme-provider"
+import { Button } from "@/components/ui/button";
+import { MapIcon, FileIcon, PlusIcon, MessageCircleIcon, UserIcon } from "lucide-react";
+import { useTheme } from "@/components/theme-provider";
 
 export default function Component() {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
 
   return (
     <div className={`fixed bottom-0 left-0 right-0 flex justify-center items-center p-4 ${theme === 'dark' ? 'navbar-dark' : 'navbar-light'}`}>
       <div className="flex space-x-8">
         <Button variant="ghost" className="text-current hover:bg-red-500 hover:text-white">
-          <UserIcon className="w-6 h-6" />
+          <MapIcon className="w-6 h-6" />
         </Button>
         <Button variant="ghost" className="text-current hover:bg-red-500 hover:text-white">
           <MessageCircleIcon className="w-6 h-6" />
@@ -30,9 +30,9 @@ export default function Component() {
           <FileIcon className="w-6 h-6" />
         </Button>
         <Button variant="ghost" className="text-current hover:bg-red-500 hover:text-white">
-          <MapIcon className="w-6 h-6" />
+          <UserIcon className="w-6 h-6" />
         </Button>
       </div>
     </div>
-  )
+  );
 }

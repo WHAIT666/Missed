@@ -15,7 +15,7 @@ const TopNavbar: React.FC = () => {
   };
 
   return (
-    <header className="flex items-center justify-between w-full h-16 px-4 bg-green-600 md:gap-4 fixed top-0 z-50">
+    <header className="flex items-center justify-between w-full h-16 px-4 bg-[#ef4444] md:gap-4 fixed top-0 z-50">
       <div className="flex items-center">
         <FishIcon className="w-8 h-8 text-white" />
         <span className="ml-2 text-xl font-bold text-white">SawYou</span>
