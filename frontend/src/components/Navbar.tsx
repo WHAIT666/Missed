@@ -1,16 +1,21 @@
 import { Button } from "@/components/ui/button"
 import { MapIcon, FileIcon, PlusIcon, MessageCircleIcon, UserIcon } from "lucide-react"
+import { useTheme } from "@/components/theme-provider"
 
 export default function Component() {
+  const { theme } = useTheme()
+
   return (
-    <div className="fixed bottom-0 left-0 right-0 flex justify-between items-center bg-white shadow-lg p-4">
-      <Button variant="ghost" className="text-red-500">
-        <MapIcon className="w-6 h-6" />
-      </Button>
-      <Button variant="ghost" className="text-gray-500">
-        <FileIcon className="w-6 h-6" />
-      </Button>
-      <div className="relative">
+    <div className={`fixed bottom-0 left-0 right-0 flex justify-center items-center p-4 ${theme === 'dark' ? 'navbar-dark' : 'navbar-light'}`}>
+      <div className="flex space-x-8">
+        <Button variant="ghost" className="text-current hover:bg-red-500 hover:text-white">
+          <UserIcon className="w-6 h-6" />
+        </Button>
+        <Button variant="ghost" className="text-current hover:bg-red-500 hover:text-white">
+          <MessageCircleIcon className="w-6 h-6" />
+        </Button>
+      </div>
+      <div className="relative mx-10">
         <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
           <Button
             variant="solid"
@@ -20,13 +25,14 @@ export default function Component() {
           </Button>
         </div>
       </div>
-      <Button variant="ghost" className="text-gray-500">
-        <MessageCircleIcon className="w-6 h-6" />
-      </Button>
-      <Button variant="ghost" className="text-gray-500">
-        <UserIcon className="w-6 h-6" />
-      </Button>
+      <div className="flex space-x-8">
+        <Button variant="ghost" className="text-current hover:bg-red-500 hover:text-white">
+          <FileIcon className="w-6 h-6" />
+        </Button>
+        <Button variant="ghost" className="text-current hover:bg-red-500 hover:text-white">
+          <MapIcon className="w-6 h-6" />
+        </Button>
+      </div>
     </div>
   )
 }
-

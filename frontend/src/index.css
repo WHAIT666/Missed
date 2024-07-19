@@ -67,3 +67,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* styles.css */
+.navbar-light {
+  background-color: #f8f9fa;
+  color: black;
+}
+
+.navbar-dark {
+  background-color: black;
+  color: white;
+}
+
+

@@ -5,8 +5,7 @@ import dotenv from 'dotenv';
 import pino from 'pino';
 import authRoutes from './routes/auth.routes';
 import postRoutes from './routes/post.routes';
-import swaggerUi from 'swagger-ui-express';
-import swaggerSpec from './config/swagger.config';
+
 
 dotenv.config();
 
