@@ -1,23 +1,23 @@
-import CountBtn from '@/components/CountBtn';
-import ReactSVG from '@/assets/react.svg';
-import { Badge } from '@/components/ui/badge';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import CreatePostPage from './pages/CreatePostPage';
+import PostDetailPage from './pages/PostDetailPage';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <main className="flex flex-col items-center justify-center h-screen">
-      <div className="flex flex-col items-center gap-y-4">
-        <div className="inline-flex items-center gap-x-4">
-          <img src={ReactSVG} alt="React Logo" className="w-32" />
-          <span className="text-6xl">+</span>
-          <img src={'/vite.svg'} alt="Vite Logo" className="w-32" />
-        </div>
-        <a href="https://ui.shadcn.com" rel="noopener noreferrer nofollow" target="_blank">
-          <Badge variant="outline">shadcn/ui</Badge>
-        </a>
-        <CountBtn />
-      </div>
-    </main>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/create-post" element={<CreatePostPage />} />
+        <Route path="/post/:id" element={<PostDetailPage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

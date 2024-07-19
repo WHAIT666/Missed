@@ -47,6 +47,10 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        ruby: {
+          DEFAULT: '#e0115f',
+          dark: '#b10d4c'
+        }
       },
       borderRadius: {
         lg: 'var(--radius)',
