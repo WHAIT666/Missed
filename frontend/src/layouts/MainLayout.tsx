@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import Navbar from '../components/Navbar';
-import { ModeToggle } from '../components/mode-toggle';
+import TopNavbar from '../components/TopNavbar';
+import BottomNavbar from '../components/BottomNavbar';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -8,12 +8,12 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <div>
-      <main>
+    <div className="min-h-screen flex flex-col">
+      <TopNavbar />
+      <main className="flex-grow pt-16 pb-16">
         {children}
       </main>
-      <ModeToggle />
-      <Navbar />
+      <BottomNavbar />
     </div>
   );
 };

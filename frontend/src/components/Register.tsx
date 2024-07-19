@@ -10,9 +10,9 @@ import { ModeToggle } from "../components/mode-toggle";
 
 export default function Register() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50 p-4">
+    <div className="flex items-center justify-center min-h-screen p-4">
       <ModeToggle />
-      <Card className="w-full max-w-md shadow-lg p-6 bg-white rounded-lg">
+      <Card className="w-full max-w-md shadow-lg p-6 rounded-lg">
         <CardHeader className="space-y-1 text-center">
           <CardTitle className="text-2xl font-semibold">Register</CardTitle>
           <CardDescription>Post and respond to sightings. Already a member? <a href="/login" className="text-red-500">Log-in Here</a></CardDescription>
@@ -33,7 +33,7 @@ export default function Register() {
               <span className="w-full border-t" />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-white px-2 text-muted-foreground">Or, create a new iSawYou account</span>
+              <span className="px-2 text-muted-foreground">Or, create a new iSawYou account</span>
             </div>
           </div>
           <div className="grid gap-2">
