@@ -33,7 +33,7 @@ export default function Register() {
               <span className="w-full border-t" />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="px-2 text-muted-foreground">Or, create a new iSawYou account</span>
+              <span className="px-2 text-muted-foreground">Or, create a new ReConnect account</span>
             </div>
           </div>
           <div className="grid gap-2">

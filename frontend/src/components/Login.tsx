@@ -32,7 +32,7 @@ export default function Login() {
               <span className="w-full border-t" />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="px-2 text-muted-foreground">Sign-in with your Missing credentials</span>
+              <span className="px-2 text-muted-foreground">Sign-in with your ReConnect credentials</span>
             </div>
           </div>
           <div className="grid gap-2">
@@ -56,7 +56,7 @@ export default function Login() {
             <hr className="my-4" />
             <a href="#" className="text-red-500 text-sm">Forgot password?</a>
             <p className="mb-2 mt-4">We use this login information to provide access to your account and personalize your experience.</p>
-            <p className="mt-2">Missing has been offering free missed-connections since 1999!</p>
+            <p className="mt-2">ReConnect has been offering free missed-connections since 2024!</p>
           </div>
         </CardContent>
       </Card>

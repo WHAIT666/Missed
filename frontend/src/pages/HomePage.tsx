@@ -5,7 +5,7 @@ const HomePage: React.FC = () => {
   return (
     <MainLayout>
       <h1>Home Page</h1>
-      <p>Welcome to Missed Connections!</p>
+      <p>Welcome to ReConnect!</p>
     </MainLayout>
   );
 };
