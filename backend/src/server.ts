@@ -3,27 +3,35 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import pino from 'pino';
+import pinoHttp from 'pino-http';
+import authRoutes from './routes/auth.routes';
+import postRoutes from './routes/post.routes';
 
 dotenv.config();
 
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+// Create pino logger
 const logger = pino({
   transport: {
     target: 'pino-pretty',
     options: {
-      colorize: true // colorizes the log output
-    }
-  }
+      colorize: true,
+    },
+  },
 });
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+app.use(pinoHttp({ logger }));
 
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.send('Hello, world!');
-  logger.info('GET / - Hello, world!');
 });
+
+app.use('/api/auth', authRoutes);
+app.use('/api/posts', postRoutes);
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/missed')
   .then(() => {
